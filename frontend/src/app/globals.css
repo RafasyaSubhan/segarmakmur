@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  /* Mendaftarkan Custom Colors */
+  --color-primary: #0f2a47;
+  --color-secondary: #1e4b75;
+  --color-accent: #d4a373;
+  --color-dark: #333333;
+  --color-light: #f4f4f4;
+  --color-bg-light: #fdfdfd;
+  --color-bg-off-white: #f0f4f8;
+
+  /* Mendaftarkan Custom Fonts dari CSS Variables di layout.tsx */
+  --font-heading: var(--font-merriweather), serif;
+  --font-body: var(--font-inter), sans-serif;
+}
