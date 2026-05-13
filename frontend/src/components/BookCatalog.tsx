@@ -1,9 +1,10 @@
 export default function BookCatalog() {
+  // Data buku sekarang tidak membutuhkan properti 'img'
   const booksData = [
-    { title: "Jejak Samudra", author: "Budi Santoso", img: "https://picsum.photos/seed/book1/300/450" },
-    { title: "Seni Memimpin", author: "Siti Aminah", img: "https://picsum.photos/seed/book2/300/450" },
-    { title: "Fajar Baru", author: "Rahmat Hidayat", img: "https://picsum.photos/seed/book3/300/450" },
-    { title: "Resep Nusantara", author: "Chef Juna", img: "https://picsum.photos/seed/book4/300/450" },
+    { title: "Jejak Samudra", author: "Budi Santoso" },
+    { title: "Seni Memimpin", author: "Siti Aminah" },
+    { title: "Fajar Baru", author: "Rahmat Hidayat" },
+    { title: "Resep Nusantara", author: "Chef Juna" },
   ];
 
   return (
@@ -22,12 +23,10 @@ export default function BookCatalog() {
           {booksData.map((book, index) => (
             <div key={index} className="text-center group cursor-pointer">
               <div className="relative mb-5 shadow-lg rounded-md overflow-hidden aspect-[2/3]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={book.img}
-                  alt={book.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+                {/* Kotak placeholder abu-abu untuk sampul buku */}
+                <div className="w-full h-full bg-gray-200 flex items-center justify-center p-4 transition-transform duration-500 group-hover:scale-110">
+                  <span className="text-gray-400 text-sm text-center">Sampul<br/>{book.title}</span>
+                </div>
               </div>
               <div>
                 <h4 className="font-heading text-lg font-bold text-primary mb-1">{book.title}</h4>

@@ -6,10 +6,8 @@ export default function Hero() {
       id="hero"
       className="relative h-screen flex items-center justify-center text-center text-white pt-20 px-5"
       style={{
-        backgroundImage:
-          "linear-gradient(rgba(15, 42, 71, 0.85), rgba(15, 42, 71, 0.7)), url('https://picsum.photos/seed/library/1920/1080')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        // Hanya menggunakan gradient warna, URL gambar dihapus
+        background: "linear-gradient(rgba(15, 42, 71, 0.85), rgba(15, 42, 71, 0.7))",
       }}
     >
       <div className="max-w-[700px] mx-auto z-10">

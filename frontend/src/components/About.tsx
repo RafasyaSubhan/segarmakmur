@@ -4,16 +4,13 @@ export default function About() {
       <div className="max-w-[1200px] mx-auto px-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           
-          {/* Bagian Gambar */}
+          {/* Bagian Gambar (Diganti Warna Kosong) */}
           <div className="relative order-2 md:order-1 mt-8 md:mt-0">
-            {/* Kotak aksen di belakang gambar (Pengganti trik ::before) */}
             <div className="absolute -top-5 -left-5 w-24 h-24 bg-accent rounded-lg z-0"></div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://picsum.photos/seed/publisher/600/400"
-              alt="Tentang Penerbit Segara Makmur Sejati"
-              className="rounded-lg shadow-xl relative z-10 w-full object-cover"
-            />
+            {/* Kotak placeholder abu-abu */}
+            <div className="rounded-lg shadow-xl relative z-10 w-full aspect-video bg-gray-200 flex items-center justify-center">
+              <span className="text-gray-400 font-medium">Gambar Tentang Kami</span>
+            </div>
           </div>
 
           {/* Bagian Teks */}
@@ -28,7 +25,6 @@ export default function About() {
               Dengan tim editorial berpengalaman dan jaringan distribusi yang luas, kami berkomitmen memberikan layanan penerbitan terbaik, mulai dari penyuntingan hingga pemasaran.
             </p>
 
-            {/* Statistik (Angka) */}
             <div className="flex gap-10">
               <div>
                 <h2 className="text-accent font-heading text-4xl md:text-5xl font-bold">500+</h2>

@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   
-  basePath: "/segaramakmur", 
+  basePath: "/segarmakmur", 
 };
 
 export default nextConfig;
