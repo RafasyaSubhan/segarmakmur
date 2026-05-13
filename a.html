@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerbit Segara Makmur Sejati</title>
+    <meta name="description" content="Website resmi Penerbit Segara Makmur Sejati. Menerbitkan karya berkualitas untuk menginspirasi dunia.">
+    
+    <!-- Mengambil Font dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Mengambil Ikon dari FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-color: #0f2a47; /* Biru Laut Dalam */
+            --secondary-color: #1e4b75; /* Biru Sedang */
+            --accent-color: #d4a373; /* Emas/Kayu Tua */
+            --text-dark: #333333;
+            --text-light: #f4f4f4;
+            --bg-light: #fdfdfd;
+            --bg-off-white: #f0f4f8;
+            --transition: all 0.3s ease;
+            --font-heading: 'Merriweather', serif;
+            --font-body: 'Inter', sans-serif;
+            --container-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* --- UTILITIES --- */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        .section-subtitle {
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #bfa07a;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--secondary-color);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(15, 42, 71, 0.85), rgba(15, 42, 71, 0.7)), 
+                        url('https://picsum.photos/seed/library/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px; /* Offset for fixed header */
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        /* --- ABOUT SECTION --- */
+        .about {
+            background-color: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            position: relative;
+        }
+
+        .about-img img {
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-img::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            background-color: var(--accent-color);
+            z-index: -1;
+            border-radius: 10px;
+        }
+
+        .about-text h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* --- SERVICES / GENRES --- */
+        .services {
+            background-color: var(--bg-off-white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* --- BOOK SHOWCASE --- */
+        .books {
+            background-color: white;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
+
+        .book-card {
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .book-cover {
+            position: relative;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 2/3;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .book-card:hover .book-cover img {
+            transform: scale(1.05);
+        }
+
+        .book-info h4 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .book-info span {
+            font-size: 0.9rem;
+            color: #777;
+            font-style: italic;
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact .section-subtitle {
+            color: #ccc;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+
+        .info-item h5 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .info-item p {
+            color: #ddd;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 5px;
+            color: white;
+            font-family: var(--font-body);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .form-control::placeholder {
+            color: #aaa;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            height: 120px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0b1e36;
+            color: #aaa;
+            padding: 40px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .social-links a {
+            color: white;
+            margin-left: 15px;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-img {
+                order: -1; /* Image first on mobile */
+                margin-bottom: 20px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+                transform: translateY(-150%); /* Hidden by default */
+                transition: transform 0.3s ease-in-out;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigasi -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-book-open"></i>
+                    Segara Makmur Sejati
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#books">Buku</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container hero-content">
+                <h1>Menjelajahi Dunia Lewat Kata</h1>
+                <p>Penerbit Segara Makmur Sejati hadir sebagai wadah kreativitas penulis Indonesia. Kami menerbitkan karya berkualitas yang menginspirasi, mendidik, dan menghibur.</p>
+                <a href="#books" class="btn btn-primary">Lihat Koleksi Buku</a>
+                <a href="#contact" class="btn btn-outline" style="margin-left: 10px; border-color: white; color: white;">Hubungi Kami</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-img">
+                        <!-- Placeholder gambar suasana kantor/perpustakaan -->
+                        <img src="https://picsum.photos/seed/publisher/600/400" alt="Tentang Penerbit Segara Makmur Sejati">
+                    </div>
+                    <div class="about-text">
+                        <h3>Mitra Terpercaya Penulis Indonesia</h3>
+                        <p>Didirikan dengan visi untuk memajukan literasi bangsa, <strong>Segara Makmur Sejati</strong> telah menerbitkan ratusan judul buku dari berbagai genre. Kami percaya bahwa setiap kata memiliki kekuatan untuk mengubah dunia.</p>
+                        <p>Dengan tim editorial berpengalaman dan jaringan distribusi yang luas, kami berkomitmen memberikan layanan penerbitan terbaik, mulai dari penyuntingan hingga pemasaran.</p>
+                        <div style="display: flex; gap: 20px; margin-top: 20px;">
+                            <div>
+                                <h2 style="color: var(--accent-color); font-family: var(--font-heading);">500+</h2>
+                                <p style="font-size: 0.9rem;">Judul Buku</p>
+                            </div>
+                            <div>
+                                <h2 style="color: var(--accent-color); font-family: var(--font-heading);">200+</h2>
+                                <p style="font-size: 0.9rem;">Penulis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section-padding services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Layanan Kami</h2>
+                    <p class="section-subtitle">Kami menyediakan solusi lengkap untuk kebutuhan penerbitan Anda.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-pen-nib service-icon"></i>
+                        <h4>Self Publishing</h4>
+                        <p>Wadah bagi penulis independen untuk menerbitkan karya mereka dengan proses yang mudah dan transparan.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-print service-icon"></i>
+                        <h4>Percetakan & Distribusi</h4>
+                        <p>Kualitas cetak terbaik dengan jaringan distribusi ke toko buku utama di seluruh Indonesia.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-edit service-icon"></i>
+                        <h4>Editorial Profesional</h4>
+                        <p>Layanan penyuntingan, proofreading, dan layouting untuk memastikan kualitas konten buku Anda.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-graduation-cap service-icon"></i>
+                        <h4>Buku Referensi</h4>
+                        <p>Spesialisasi dalam penerbitan buku akademik, kurikulum, dan referensi pendidikan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Books Showcase Section -->
+        <section id="books" class="section-padding books">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Buku Unggulan</h2>
+                    <p class="section-subtitle">Koleksi terbaru dan terlaris yang paling banyak dibaca.</p>
+                </div>
+                <div class="book-grid">
+                    <!-- Buku 1 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/book1/300/450" alt="Jejak Samudra">
+                        </div>
+                        <div class="book-info">
+                            <h4>Jejak Samudra</h4>
+                            <span>Oleh: Budi Santoso</span>
+                        </div>
+                    </div>
+                    <!-- Buku 2 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/book2/300/450" alt="Seni Memimpin">
+                        </div>
+                        <div class="book-info">
+                            <h4>Seni Memimpin</h4>
+                            <span>Oleh: Siti Aminah</span>
+                        </div>
+                    </div>
+                    <!-- Buku 3 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/book3/300/450" alt="Fajar Baru">
+                        </div>
+                        <div class="book-info">
+                            <h4>Fajar Baru</h4>
+                            <span>Oleh: Rahmat Hidayat</span>
+                        </div>
+                    </div>
+                    <!-- Buku 4 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/book4/300/450" alt="Resep Nusantara">
+                        </div>
+                        <div class="book-info">
+                            <h4>Resep Nusantara</h4>
+                            <span>Oleh: Chef Juna</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="#" class="btn btn-primary">Lihat Semua Katalog</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Hubungi Kami</h2>
+                    <p class="section-subtitle">Tertarik bekerja sama atau ingin menerbitkan buku Anda? Hubungi kami sekarang.</p>
+                </div>
+                <div class="contact-container">
+                    <!-- Info Kontak -->
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h5>Alamat Kantor</h5>
+                                <p>Jl. Laut Selatan No. 88, Jakarta Selatan, Indonesia 12345</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>info@segaramakmursejati.com<br>redaksi@segaramakmursejati.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h5>Telepon</h5>
+                                <p>+62 21 5555 8888<br>+62 812 3456 7890 (WhatsApp)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h5>Jam Operasional</h5>
+                                <p>Senin - Jumat: 09.00 - 17.00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Kontak -->
+                    <div class="contact-form">
+                        <form onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah kami terima (Mode Demo).');">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Nama Lengkap" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Alamat Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Subjek Pesan">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; border: none;">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-book-open" style="color: var(--accent-color);"></i> Segara Makmur Sejati
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Penerbit Segara Makmur Sejati. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple Script untuk Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('mobile-menu');
+            const navLinks = document.getElementById('nav-links');
+            const navItems = document.querySelectorAll('.nav-links a');
+
+            // Toggle menu saat ikon hamburger diklik
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                
+                // Ubah ikon dari bars ke times (X)
+                const icon = menuToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Tutup menu saat salah satu link diklik
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
