@@ -25,21 +25,21 @@ export default function Contact() {
               <i className="fas fa-map-marker-alt text-2xl text-accent mt-1"></i>
               <div>
                 <h5 className="text-lg font-bold mb-1">Alamat Kantor</h5>
-                <p className="text-gray-300">Jl. Laut Selatan No. 88, Jakarta Selatan, Indonesia 12345</p>
+                <p className="text-gray-300">Jl. Malaka III No.170, Malaka Sari, Duren Sawit, Jakarta 13460</p>
               </div>
             </div>
             <div className="flex items-start gap-5">
               <i className="fas fa-envelope text-2xl text-accent mt-1"></i>
               <div>
                 <h5 className="text-lg font-bold mb-1">Email</h5>
-                <p className="text-gray-300">info@segaramakmursejati.com<br />redaksi@segaramakmursejati.com</p>
+                <p className="text-gray-300">segaramakmurs@gmail.com</p>
               </div>
             </div>
             <div className="flex items-start gap-5">
               <i className="fas fa-phone text-2xl text-accent mt-1"></i>
               <div>
                 <h5 className="text-lg font-bold mb-1">Telepon</h5>
-                <p className="text-gray-300">+62 21 5555 8888<br />+62 812 3456 7890 (WhatsApp)</p>
+                <p className="text-gray-300">+62 811 1666 50 (WhatsApp)</p>
               </div>
             </div>
             <div className="flex items-start gap-5">
