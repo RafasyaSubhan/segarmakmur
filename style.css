@@ -1,0 +1,21 @@
+::-webkit-scrollbar {
+  width: 10px; /* Lebar scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f4f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4a373; /* Warna batang scrollbar (warna accent/emas) */
+  border-radius: 5px; /* Membuat ujungnya membulat */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bfa07a; /* Warna batang scrollbar saat disentuh mouse */
+}
+
+/* --- Memastikan efek scroll halus --- */
+html {
+  scroll-behavior: smooth;
+}

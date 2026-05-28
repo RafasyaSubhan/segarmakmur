@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerbit Segara Makmur Sejati</title>
+    <meta name="description" content="Website resmi Penerbit Segara Makmur Sejati. Menerbitkan karya berkualitas untuk menginspirasi dunia.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="tailwind-config.js"></script>
+
+</head>
+<body class="font-body bg-bg-light text-dark antialiased">
+
+    <header class="fixed w-full top-0 z-50 bg-white shadow-md">
+        <div class="max-w-[1200px] mx-auto px-5">
+            <nav class="flex justify-between items-center h-20">
+                <a href="#" class="font-heading text-2xl font-bold text-primary flex items-center gap-2">
+                    <i class="fas fa-book-open text-accent"></i>
+                    Segara Makmur Sejati
+                </a>
+
+                <button class="md:hidden text-2xl text-primary focus:outline-none" onclick="toggleMenu()" aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fas fa-bars"></i>
+                </button>
+
+                <ul id="mobile-menu" class="absolute top-20 left-0 w-full bg-white flex-col items-center py-5 shadow-lg gap-6 md:static md:w-auto md:bg-transparent md:flex-row md:py-0 md:shadow-none md:flex md:gap-8 hidden transition-all duration-300 ease-in-out">
+                    <li>
+                        <a href="#hero" onclick="closeMenu()" class="font-medium text-secondary hover:text-accent transition-colors">Beranda</a>
+                    </li>
+                    <li>
+                        <a href="#about" onclick="closeMenu()" class="font-medium text-secondary hover:text-accent transition-colors">Tentang Kami</a>
+                    </li>
+                    <li>
+                        <a href="#services" onclick="closeMenu()" class="font-medium text-secondary hover:text-accent transition-colors">Layanan</a>
+                    </li>
+                    <li>
+                        <a href="#books" onclick="closeMenu()" class="font-medium text-secondary hover:text-accent transition-colors">Buku</a>
+                    </li>
+                    <li>
+                        <a href="#contact" onclick="closeMenu()" class="font-medium text-secondary hover:text-accent transition-colors">Kontak</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="relative h-screen flex items-center justify-center text-center text-white pt-20 px-5" style="background: linear-gradient(rgba(15, 42, 71, 0.85), rgba(15, 42, 71, 0.7))">
+            <div class="max-w-[700px] mx-auto z-10">
+                <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Menjelajahi Dunia Lewat Kata
+                </h1>
+                <p class="text-lg md:text-xl mb-8 text-white/90 font-light">
+                Penerbit Segara Makmur Sejati hadir sebagai wadah kreativitas penulis Indonesia. Kami menerbitkan karya berkualitas yang menginspirasi, mendidik, dan menghibur.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#books" class="bg-accent hover:brightness-90 text-white px-8 py-3 rounded-md font-medium transition-all duration-300 hover:-translate-y-1">
+                        Lihat Koleksi Buku
+                    </a>
+                    <a href="#contact" class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 rounded-md font-medium transition-all duration-300">
+                        Hubungi Kami
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-[1200px] mx-auto px-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="relative order-2 md:order-1 mt-8 md:mt-0">
+                        <div class="absolute -top-5 -left-5 w-24 h-24 bg-accent rounded-lg z-0"></div>
+                        <div class="rounded-lg shadow-xl relative z-10 w-full aspect-video bg-gray-200 flex items-center justify-center">
+                        <span class="text-gray-400 font-medium">Gambar Tentang Kami</span>
+                        </div>
+                    </div>
+
+                    <div class="order-1 md:order-2">
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-5">
+                        Mitra Terpercaya Penulis Indonesia
+                        </h3>
+                        <p class="text-gray-600 mb-5 leading-relaxed text-lg">
+                        Didirikan dengan visi untuk memajukan literasi bangsa, <strong>Segara Makmur Sejati</strong> telah menerbitkan ratusan judul buku dari berbagai genre. Kami percaya bahwa setiap kata memiliki kekuatan untuk mengubah dunia.
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                        Dengan tim editorial berpengalaman dan jaringan distribusi yang luas, kami berkomitmen memberikan layanan penerbitan terbaik, mulai dari penyuntingan hingga pemasaran.
+                        </p>
+
+                        <div class="flex gap-10">
+                            <div>
+                                <h2 class="text-accent font-heading text-4xl md:text-5xl font-bold">500+</h2>
+                                <p class="text-sm md:text-base text-gray-500 mt-2 font-medium">Judul Buku</p>
+                            </div>
+
+                            <div>
+                                <h2 class="text-accent font-heading text-4xl md:text-5xl font-bold">200+</h2>
+                                <p class="text-sm md:text-base text-gray-500 mt-2 font-medium">Penulis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20 bg-bg-off-white">
+            <div class="max-w-[1200px] mx-auto px-5">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-4 relative inline-block after:content-[''] after:block after:w-16 after:h-1 after:bg-accent after:mx-auto after:mt-4">
+                        Layanan Kami
+                    </h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto mt-6 text-lg">
+                        Kami menyediakan solusi lengkap untuk kebutuhan penerbitan Anda.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-xl text-center shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-300 group">
+                        <i class="fas fa-pen-nib text-4xl text-accent mb-6 group-hover:scale-110 transition-transform duration-300"></i>
+                        <h4 class="text-xl font-bold text-primary mb-4">Self Publishing</h4>
+                        <p class="text-gray-600">Wadah bagi penulis independen untuk menerbitkan karya mereka dengan proses yang mudah dan transparan.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl text-center shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-300 group">
+                        <i class="fas fa-print text-4xl text-accent mb-6 group-hover:scale-110 transition-transform duration-300"></i>
+                        <h4 class="text-xl font-bold text-primary mb-4">Percetakan & Distribusi</h4>
+                        <p class="text-gray-600">Kualitas cetak terbaik dengan jaringan distribusi ke toko buku utama di seluruh Indonesia.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl text-center shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-300 group">
+                        <i class="fas fa-edit text-4xl text-accent mb-6 group-hover:scale-110 transition-transform duration-300"></i>
+                        <h4 class="text-xl font-bold text-primary mb-4">Editorial Profesional</h4>
+                        <p class="text-gray-600">Layanan penyuntingan, proofreading, dan layouting untuk memastikan kualitas konten buku Anda.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl text-center shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-300 group">
+                        <i class="fas fa-graduation-cap text-4xl text-accent mb-6 group-hover:scale-110 transition-transform duration-300"></i>
+                        <h4 class="text-xl font-bold text-primary mb-4">Buku Referensi</h4>
+                        <p class="text-gray-600">Spesialisasi dalam penerbitan buku akademik, kurikulum, dan referensi pendidikan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="books" class="py-20 bg-white">
+            <div class="max-w-[1200px] mx-auto px-5">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-4 relative inline-block after:content-[''] after:block after:w-16 after:h-1 after:bg-accent after:mx-auto after:mt-4">
+                        Buku Unggulan
+                    </h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto mt-6 text-lg">
+                        Koleksi terbaru dan terlaris yang paling banyak dibaca.
+                    </p>
+                </div>
+
+                <div class="flex justify-center flex-wrap gap-10">
+                    <div class="text-center group cursor-pointer w-full max-w-xs">
+                        <div class="relative mb-5 shadow-lg rounded-md overflow-hidden aspect-[2/3]">
+                            <img 
+                                src="images/ALFASIH.jpg" 
+                                alt="Sampul Silsilah Al Fasihh" 
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            >
+                        </div>
+                        <div>
+                            <h4 class="font-heading text-lg font-bold text-primary mb-1">Silsilah Al Fasihh</h4>
+                            <span class="text-sm text-gray-500 italic">Oleh: Budi Santoso</span>
+                        </div>
+                    </div>
+                    <!-- Add another books here -->
+                </div>
+    <!-- 
+                <div class="text-center mt-12">
+                    <button class="bg-accent hover:brightness-90 text-white px-8 py-3 rounded-md font-medium transition-all duration-300">
+                        Lihat Semua Katalog
+                    </button>
+                </div> -->
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-primary text-white">
+            <div class="max-w-[1200px] mx-auto px-5">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4 relative inline-block after:content-[''] after:block after:w-16 after:h-1 after:bg-accent after:mx-auto after:mt-4">
+                        Hubungi Kami
+                    </h2>
+                    <p class="text-gray-300 max-w-2xl mx-auto mt-6 text-lg">
+                        Tertarik bekerja sama atau ingin menerbitkan buku Anda? Hubungi kami sekarang.
+                    </p>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-12 justify-between">
+                    <div class="flex-1 space-y-8">
+                        <div class="flex items-start gap-5">
+                            <i class="fas fa-map-marker-alt text-2xl text-accent mt-1"></i>
+                            <div>
+                                <h5 class="text-lg font-bold mb-1">Alamat Kantor</h5>
+                                <p class="text-gray-300">Jl. Malaka III No.170, Malaka Sari, Duren Sawit, Jakarta 13460</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-5">
+                            <i class="fas fa-envelope text-2xl text-accent mt-1"></i>
+                            <div>
+                                <h5 class="text-lg font-bold mb-1">Email</h5>
+                                <p class="text-gray-300">segaramakmurs@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-5">
+                            <i class="fas fa-phone text-2xl text-accent mt-1"></i>
+                            <div>
+                                <h5 class="text-lg font-bold mb-1">Telepon</h5>
+                                <p class="text-gray-300">+62 811 1666 50 (WhatsApp)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-5">
+                                <i class="fas fa-clock text-2xl text-accent mt-1"></i>
+                            <div>
+                                <h5 class="text-lg font-bold mb-1">Jam Operasional</h5>
+                                <p class="text-gray-300">Senin - Jumat: 09.00 - 17.00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-1">
+                        <form onsubmit="handleFormSubmit(event)" class="space-y-5">
+                            <div>
+                                <input type="text" placeholder="Nama Lengkap" required class="w-full p-4 bg-white/10 border border-white/20 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/15 transition-colors"/>
+                            </div>
+
+                            <div>
+                                <input type="email" placeholder="Alamat Email" required class="w-full p-4 bg-white/10 border border-white/20 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/15 transition-colors"/>
+                            </div>
+
+                            <div>
+                                <input type="text" placeholder="Subjek Pesan" class="w-full p-4 bg-white/10 border border-white/20 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/15 transition-colors"/>
+                            </div>
+
+                            <div>
+                                <textarea placeholder="Tulis pesan Anda di sini..." required rows="5" class="w-full p-4 bg-white/10 border border-white/20 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:bg-white/15 transition-colors resize-y"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-accent hover:bg-[#bfa07a] text-white py-4 rounded-md font-bold transition-colors">
+                                Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#0b1e36] text-gray-400 py-10 text-sm">
+        <div class="max-w-[1200px] mx-auto px-5">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-5 pb-8 border-b border-white/10">
+                <div class="font-heading text-white text-xl font-bold flex items-center gap-2">
+                    <i class="fas fa-book-open text-accent"></i> Segara Makmur Sejati
+                </div>
+
+                <div class="flex gap-4 text-lg">
+                    <a href="https://web.facebook.com/profile.php?id=61585098971120" class="text-white hover:text-accent transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/segaramakmurs/" class="text-white hover:text-accent transition-colors" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="text-center pt-8">
+                <p>&copy; <span id="current-year"></span> Penerbit Segara Makmur Sejati. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
